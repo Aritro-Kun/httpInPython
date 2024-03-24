@@ -26,7 +26,7 @@ if client_socket:
         if client_request_data.upper() == "STOP":
             break
         elif client_request_data.upper() in ["GET", "POST", "DELETE", "PUT"]:
-            response_to_client = "You have chosen the client_request_data.upper() method."
+            response_to_client = f"You have chosen the {client_request_data.upper()} method."
         else:
             response_to_client = "You have not chosen an appropriate method."
         client_socket.send(response_to_client.encode("utf-8"))
